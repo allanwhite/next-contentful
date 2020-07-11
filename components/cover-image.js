@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function CoverImage({ title, url, slug }) {
   const image = (
     <img
-      src={url}
+      src={`${url}?w=1200&h=600&fit=thumb&fm=webp`}
       alt={`Cover Image for ${title}`}
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
