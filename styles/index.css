@@ -3,3 +3,16 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+.button {
+    @screen lg {
+        @apply px-8 mb-0;
+    }
+    @apply mx-3 bg-black border border-gray-500 text-white font-bold py-3 px-10 duration-200 transition-colors mb-6;
+}
+.button:hover {
+    @apply bg-white text-black;
+}
+.button-secondary {
+    @apply bg-gray-700 text-white px-4;
+}
