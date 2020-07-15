@@ -12,7 +12,7 @@ export default function CoverImage({ title, url, slug, description }) {
       })}
     />
     {description ? (
-      <figcaption class="italic font-serif py-3">
+      <figcaption className="italic font-serif py-3">
         {description}
       </figcaption>
     ) : null
