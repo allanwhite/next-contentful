@@ -4,6 +4,10 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+a.link:hover {
+    @apply mb-1 border-b-2 border-blue-300 transition-colors duration-75 ease-in-out;
+}
+
 .button {
     @screen lg {
         @apply px-8 mb-0;

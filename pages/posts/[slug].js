@@ -4,6 +4,7 @@ import ErrorPage from 'next/error'
 import Container from '../../components/container'
 import PostBody from '../../components/post-body'
 import MoreStories from '../../components/more-stories'
+import BestList from '../../components/best-list'
 import Header from '../../components/header'
 import PostHeader from '../../components/post-header'
 import SectionSeparator from '../../components/section-separator'
@@ -40,7 +41,14 @@ export default function Post({ post, morePosts, preview }) {
                 date={post.date}
                 author={post.author}
               />
-              <PostBody content={post.content} />
+              <div className="flex flex-col md:flex-row justify-center">
+                <PostBody content={post.content} />
+                <div className="w-full lg:w-48">
+                {morePosts && morePosts.length > 0 && (
+                  <BestList posts={morePosts} />
+                )}
+                </div>
+              </div>
             </article>
             <SectionSeparator />
             {morePosts && morePosts.length > 0 && (
